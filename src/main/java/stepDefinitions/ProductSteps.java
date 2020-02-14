@@ -17,7 +17,7 @@ public class ProductSteps extends DriverFactory {
 
 	@When("^user clicks on \"([^\"]*)\"$")
 	public void user_clicks_on(String locator) throws InterruptedException, IOException {
-		Assert.fail();
+//		Assert.fail();
 		BasePage basePage = new BasePage();
 		basePage.WaitUntilWebElementIsVisibleUsingByLocator(By.cssSelector(locator));
 		getDriver().findElement(By.cssSelector(locator)).click();
