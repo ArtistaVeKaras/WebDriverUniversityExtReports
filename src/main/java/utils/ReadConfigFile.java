@@ -9,6 +9,8 @@ public class ReadConfigFile {
 	public InputStream input = null;
 	public Properties prop = null;
 
+
+	//This methods are useless because the read the FileInputStream direct from the DriverFactory
 	public ReadConfigFile() {
 		try {
 			input = ReadConfigFile.class.getClassLoader().getResourceAsStream(Constant.CONFIG_PROPERTIES_DIRECTORY);

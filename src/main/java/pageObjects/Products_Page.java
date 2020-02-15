@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Products_Page extends BasePage {
+
 	public @FindBy(css = "#container-special-offers") WebElement button_SpecialOffers;
 	public @FindBy(xpath = ".//*[@id='container-product2']") WebElement button_NewLaptops;
 	public @FindBy(xpath = ".//*[@id='myModal']//b[contains(text(),'NEWCUSTOMER')]") WebElement voucherCode;
