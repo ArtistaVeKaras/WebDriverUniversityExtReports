@@ -1,5 +1,6 @@
 Feature: Products page
 
+@Prod
 Scenario Outline: validate promo code alert is visible when clicking on the special offers link
 	Given user navigates to "<url>" website
 	When user clicks on "<button>"
@@ -7,5 +8,5 @@ Scenario Outline: validate promo code alert is visible when clicking on the spec
 	
 	Examples: 
 	| 									  	url							 | 					button					|
-	| http://www.webdriveruniversity.com/Page-Object-Model/products.html | 			#container-special-offers2       |
+	| http://www.webdriveruniversity.com/Page-Object-Model/products.html | 			        #amp-img				|
 	

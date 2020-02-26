@@ -13,7 +13,7 @@ public class ContactUs_Page extends BasePage{
 	public @FindBy(xpath = "//input[@name='last_name']") WebElement textfield_LastName;
 	public @FindBy(xpath = "//input[@name='email']") WebElement textfield_EmailAddress;
 	public @FindBy(xpath = "//textarea[@name='message']") WebElement textfield_Message;
-	public @FindBy(xpath = "//input[@value='SUBMIT']2") WebElement button_Submit;
+	public @FindBy(xpath = "//div[@id='form_buttons']//input[2]") WebElement button_Submit;
 	
 	public ContactUs_Page() throws IOException {
 		super();
@@ -47,7 +47,7 @@ public class ContactUs_Page extends BasePage{
 	}
 	
 	public ContactUs_Page clickOnSubmiButton() throws Exception {
-		Assert.fail();
+//		Assert.fail();
 		waitAndClickElement(button_Submit);
 		return new ContactUs_Page();
 	}

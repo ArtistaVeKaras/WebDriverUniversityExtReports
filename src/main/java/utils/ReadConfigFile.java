@@ -9,6 +9,8 @@ public class ReadConfigFile {
 	public InputStream input = null;
 	public Properties prop = null;
 
+
+	//This methods are useless because the read the FileInputStream direct from the DriverFactory
 	public ReadConfigFile() {
 		try {
 			input = ReadConfigFile.class.getClassLoader().getResourceAsStream(Constant.CONFIG_PROPERTIES_DIRECTORY);
@@ -27,8 +29,8 @@ public class ReadConfigFile {
 	
 	public String readPropertiesFileForCMD(String term) throws IOException {
 		Properties p = new Properties();
-		FileInputStream fi = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\properties\\config.properties");
-		p.load(fi);
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\properties\\config.properties");
+		p.load(fis);
 		return p.getProperty(term.toLowerCase());
 	}
 }
