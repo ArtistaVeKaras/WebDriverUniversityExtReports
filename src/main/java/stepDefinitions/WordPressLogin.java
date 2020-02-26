@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -17,20 +18,20 @@ public class WordPressLogin extends DriverFactory {
 
     @When("^The user enters the email address$")
     public void the_user_enters_the_email_address() throws Throwable {
-     wordPressPage.enterEmail();
+        wordPressPage.enterEmail();
     }
 
-    @When("^The user enters a username$")
+    @And("^The user enters a username$")
     public void the_user_enters_a_username() throws Throwable {
-    wordPressPage.enterUsername();
+        wordPressPage.enterUsername();
     }
 
-    @When("^The user enters a password$")
+    @And("^The user enters a password$")
     public void the_user_enters_a_password() throws Throwable {
         wordPressPage.enterPassword();
     }
 
-    @When("^The user click the create account button$")
+    @And("^The user click the create account button$")
     public void the_user_click_the_create_account_button() throws Throwable {
         wordPressPage.clickCreateAccoutnButton();
     }
