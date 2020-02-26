@@ -2,7 +2,6 @@ package runners;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.junit.runner.RunWith;
 import org.testng.annotations.AfterClass;
 import com.cucumber.listener.Reporter;
@@ -12,7 +11,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import pageObjects.BasePage;
 
 @RunWith(Cucumber.class)
-
 @CucumberOptions(features = { "src/test/java/resources/features/" },
 		         glue = {"stepDefinitions" },
 		         monochrome = true,
