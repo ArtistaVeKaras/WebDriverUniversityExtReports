@@ -12,3 +12,4 @@ Scenario Outline: Login to account with credentials
 	Examples:
 	| 	url 							| 		username 		|		 password		 |		 message		 |
 	|http://www.webdriveruniversity.com/|	webdriver			|		webdriver123	 | validation succeeded  |
+	|http://www.webdriveruniversity.com/|	webdriver1			|		@webdriver123	 | validation succeeded  |

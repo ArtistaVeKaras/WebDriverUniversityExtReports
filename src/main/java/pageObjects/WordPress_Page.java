@@ -1,8 +1,11 @@
 package pageObjects;
 
 import cucumber.api.DataTable;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -35,8 +38,7 @@ public class WordPress_Page extends BasePage{
         waitAndClickElement(textfield_CreateAccountButton);
         return wordPressPage;
     }
-    public WordPress_Page validationOfWordPressMainPage(){
-    //Assertion not possible to perform atm!!
+    public WordPress_Page validationOfWordPressMainPage() throws InterruptedException {
         return wordPressPage;
     }
 }

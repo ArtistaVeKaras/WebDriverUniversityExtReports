@@ -9,15 +9,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-import pageObjects.ContactUs_Page;
-import pageObjects.Products_Page;
-import pageObjects.WordPress_Page;
+import pageObjects.*;
 
 public class DriverFactory {
 	public static WebDriver driver;
 	public static ContactUs_Page contactUsPage;
 	public static Products_Page productsPage;
 	public static WordPress_Page wordPressPage;
+	public static Weebly_Page weebly_page;
+	public static FillForm_Page fill_form;
+
 
 	public WebDriver getDriver() {
 		try {
@@ -67,6 +68,8 @@ public class DriverFactory {
 			contactUsPage = PageFactory.initElements(driver, ContactUs_Page.class);
 			productsPage = PageFactory.initElements(driver, Products_Page.class);
 			wordPressPage= PageFactory.initElements(driver, WordPress_Page.class);
+			weebly_page= PageFactory.initElements(driver, Weebly_Page.class);
+			fill_form= PageFactory.initElements(driver, FillForm_Page.class);
 		}
 		return driver;
 	}
