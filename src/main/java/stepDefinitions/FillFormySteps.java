@@ -32,6 +32,7 @@ public class FillFormySteps extends DriverFactory {
 
     @Given("^The user click Submit form$")
     public void the_user_click_Submit_form() throws Throwable {
+        fill_form.clickSubmitButton();
     }
 
     @Then("^The user should be presented with a thank you message$")

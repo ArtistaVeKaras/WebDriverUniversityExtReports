@@ -1,4 +1,4 @@
-package runners;
+package CucumberFramework.runners;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import pageObjects.BasePage;
 						    "json:target/cucumber.json",
 						    "com.cucumber.listener.ExtentCucumberFormatter:output/report.html"})
 
-public class MainRunner extends AbstractTestNGCucumberTests {
+public class MainRunnerScreenShootMethod extends AbstractTestNGCucumberTests {
 	@AfterClass
 	public static void writeExtentReport() throws IOException {
 		Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "/src/main/java/utils/ReportsConfig.xml"));
