@@ -6,14 +6,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class KeyboardAndMouseInput {
-
-
+public class SeleniumEssentials {
 //    this methods i developed in other projects
     public static WebDriver driver;
 
     public static void main(String[] args) throws InterruptedException {
 //        driver = util.getDriver();
+//        t=The driver will not open it needs to extend from the DriverFactory
         fillInForm();
         autoComplete();
         //scrollToElement();
@@ -28,7 +27,6 @@ public class KeyboardAndMouseInput {
         //implicitlyWait();
         //explicitlyWait();
         WebForm();
-
     }
 
     //Open the browser and fill in the form (Task 1)
@@ -40,7 +38,6 @@ public class KeyboardAndMouseInput {
         button.click();
         Thread.sleep(1000);
     }
-
     //Open browser and perform a autocomplete (Task 2)
     public static void autoComplete() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/autocomplete");
@@ -50,7 +47,6 @@ public class KeyboardAndMouseInput {
         WebElement autoCompleteResult = driver.findElement(By.className("pac-item"));
         autoCompleteResult.click();
     }
-
     //Scroll to element on the page (Task 3)
     public static void scroolToElement() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/scroll");
@@ -65,7 +61,6 @@ public class KeyboardAndMouseInput {
         date.sendKeys("01/01/2020");
         Thread.sleep(1000);
     }
-
     //Switching to the original window
     public static void switchWindow() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/switch-window");
@@ -78,11 +73,9 @@ public class KeyboardAndMouseInput {
             driver.switchTo().window(handle1);
             Thread.sleep(1000);
         }
-
         //swhitches back to the original window
         driver.switchTo().window(originalHandle);
     }
-
     //Switching to the alert element
     public static void switchToAlert(){
         driver.get("https://formy-project.herokuapp.com/switch-window");
@@ -92,7 +85,6 @@ public class KeyboardAndMouseInput {
         Alert alert1 = driver.switchTo().alert();
         alert1.accept();
     }
-
     //Performing JavaScript commands on the alert button
     public static void javaScriptCommands() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/modal");
@@ -105,7 +97,6 @@ public class KeyboardAndMouseInput {
         Thread.sleep(1000);
         driver.quit();
     }
-
     //Performing drag and drop
     public static void dragAndDrop(){
         driver.manage().window().maximize();
@@ -116,7 +107,6 @@ public class KeyboardAndMouseInput {
         Actions action = new Actions(driver);
         action.dragAndDrop(image,box).build().perform();
     }
-
     //Performing radio button checks
     public static void radioButton() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/radiobutton");
@@ -127,27 +117,22 @@ public class KeyboardAndMouseInput {
         WebElement radioButton3 = driver.findElement(By.cssSelector("input[value='option3']"));
         radioButton3.click();
     }
-
     //Performing date picker
     public static void datePiker(){
         driver.get("https://formy-project.herokuapp.com/datepicker");
-
         WebElement date = driver.findElement(By.id("datepicker"));
         date.sendKeys("01/01/2020");
         date.sendKeys(Keys.RETURN);
         driver.quit();
     }
-
     //Performing Dropdown
     public static void dropDown(){
         driver.get("https://formy-project.herokuapp.com/dropdown");
-
         WebElement dropMenu = driver.findElement(By.id("dropdownMenuButton"));
         dropMenu.click();
         WebElement autoComplete = driver.findElement(By.id("autocomplete"));
         autoComplete.click();
     }
-
     //Performing upload file
     public static void uploadFile(){
         driver.get("https://formy-project.herokuapp.com/fileupload");
@@ -157,8 +142,7 @@ public class KeyboardAndMouseInput {
         uploadUploadField.sendKeys("AkiraAv.jpg");
         //driver.quit();
     }
-
-    //Implicitly wait
+    //Implicitly wait will wait a couple seconds before something is performed
     public static void implicitlyWait(){
         driver.get("https://formy-project.herokuapp.com/autocomplete");
         WebElement autocomplete = driver.findElement(By.id("autocomplete"));
@@ -170,8 +154,7 @@ public class KeyboardAndMouseInput {
         autoCompleteResult.click();
         driver.quit();
     }
-
-    //Explicitly Wait
+    //Explicitly Wait will wait until a certain element is visible/dispkayed or clickable
     public static void explicitlyWait(){
         driver.get("https://formy-project.herokuapp.com/autocomplete");
         WebElement autocomplete = driver.findElement(By.id("autocomplete"));
@@ -181,7 +164,6 @@ public class KeyboardAndMouseInput {
         WebElement autoCompleteResult = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("pac-item")));
         autoCompleteResult.click();
     }
-
     //Complete Web Form
     public static void WebForm(){
         driver.get("https://formy-project.herokuapp.com/form");
@@ -197,6 +179,5 @@ public class KeyboardAndMouseInput {
         date.sendKeys(Keys.RETURN);
         driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
         driver.quit();
-
     }
 }
