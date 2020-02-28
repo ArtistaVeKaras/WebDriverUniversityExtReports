@@ -1,4 +1,4 @@
-package CucumberFramework.steps;
+package stepDefinitions;
 
 import static org.testng.Assert.assertEquals;
 
@@ -33,7 +33,6 @@ public class LoginSteps {
 		driver.quit();
 	}
 	
-	
 	@Given("^user navigates to \"([^\"]*)\"$")
 	public void user_navigates_to(String url) throws Throwable {
 		driver.get(url);  //http://www.webdriveruniversity.com/
@@ -52,7 +51,6 @@ public class LoginSteps {
 		}
 		//send username keys
 		driver.findElement(By.id("text")).sendKeys(username);
-
 	}
 
 	@And("^user enter the \"([^\"]*)\" password$")
