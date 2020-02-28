@@ -14,7 +14,7 @@ import pageObjects.BasePage;
 @CucumberOptions(features = { "src/test/java/resources/features/" },
 		         glue = {"stepDefinitions" },
 		         monochrome = true,
-		         tags = {"@Prod"},
+		         tags = {"@Form"},
 				 plugin = { "pretty", "html:target/cucumber",
 						    "json:target/cucumber.json",
 						    "com.cucumber.listener.ExtentCucumberFormatter:output/report.html"})

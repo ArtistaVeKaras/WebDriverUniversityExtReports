@@ -37,5 +37,6 @@ public class FillFormySteps extends DriverFactory {
 
     @Then("^The user should be presented with a thank you message$")
     public void the_user_should_be_presented_with_a_thank_you_message() throws Throwable {
+
     }
 }

@@ -1,35 +1,18 @@
 package pageObjects;
 
-import java.awt.AWTException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Date;
-import java.util.List;
+import com.cucumber.listener.Reporter;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.cucumber.listener.Reporter;
-import cucumber.api.Scenario;
 import utils.DriverFactory;
+import java.awt.*;
+import java.io.*;
+import java.util.Date;
+import java.util.List;
 
 public class BasePage extends DriverFactory {
 	protected WebDriverWait wait;
@@ -90,7 +73,6 @@ public class BasePage extends DriverFactory {
 		}
 	}
 
-
 	public void clickOnElementUsingCustomTimeout(WebElement locator, WebDriver driver, int timeout) {
 		try {
 			final WebDriverWait customWait = new WebDriverWait(driver, timeout);
@@ -102,11 +84,7 @@ public class BasePage extends DriverFactory {
 			Assert.fail("Unable to click on the WebElement, Exception: " + e.getMessage());
 		}
 	}
-	
-	/**********************************************************************************/
-	/**********************************************************************************/
-	
-	
+
 	 /**********************************************************************************
 	 **ACTION METHODS
 	 **********************************************************************************/
@@ -149,10 +127,6 @@ public class BasePage extends DriverFactory {
 		}
 	}
 
-	/**********************************************************************************/
-	/**********************************************************************************/
-
-	
 	/**********************************************************************************
 	 **SEND KEYS METHODS /
 	 **********************************************************************************/
@@ -168,10 +142,6 @@ public class BasePage extends DriverFactory {
 		}
 	}
 
-	/**********************************************************************************/
-	/**********************************************************************************/
-
-	
 	/**********************************************************************************
 	 **JS METHODS & JS SCROLL
 	 **********************************************************************************/
@@ -222,10 +192,6 @@ public class BasePage extends DriverFactory {
 		js.executeScript("arguments[0].click();", element);
 	}
 
-	/**********************************************************************************/
-	/**********************************************************************************/
-
-	
 	/**********************************************************************************
 	 **WAIT METHODS
 	 **********************************************************************************/
@@ -264,15 +230,10 @@ public class BasePage extends DriverFactory {
 		}
 	}
 
-
 	public boolean waitUntilPreLoadElementDissapears(By element) {
 		return this.wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
 	}
 
-	/**********************************************************************************/
-	/**********************************************************************************/
-
-	
 	/**********************************************************************************
 	 **PAGE METHODS
 	 **********************************************************************************/
@@ -280,7 +241,6 @@ public class BasePage extends DriverFactory {
 		driver.get(url);
 		return new BasePage();
 	}
-
 
 	public String getCurrentURL() {
 		try {
@@ -304,11 +264,7 @@ public class BasePage extends DriverFactory {
 			return e.getMessage();
 		}
 	}
-	
-	/**********************************************************************************/
-	/**********************************************************************************/
 
-	
 	/**********************************************************************************
 	 **ALERT & POPUPS METHODS
 	 **********************************************************************************/
@@ -361,9 +317,9 @@ public class BasePage extends DriverFactory {
 			Assert.fail("Unable to close the popup, Exception: " + e.getMessage());
 		}
 	}
+
 	/**********************************************************************************/
 	/**********************************************************************************/
-	
 	/***EXTENT REPORT****************************************************************/
 	public static String returnDateStamp(String fileExtension) {
 		Date d = new Date();

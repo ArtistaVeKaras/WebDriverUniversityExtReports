@@ -37,6 +37,7 @@ public class DriverFactory {
 					DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 					capabilities.setCapability("marionette", true);
 					driver = new FirefoxDriver();
+//					maximising the gecko driver does not work as well it does with chrome
 				}
 				break;
 

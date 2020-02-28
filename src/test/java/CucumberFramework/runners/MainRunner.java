@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/test/java/resources/features/"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@Form"},
+		tags = {""},
 		plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"}
 		)
 
