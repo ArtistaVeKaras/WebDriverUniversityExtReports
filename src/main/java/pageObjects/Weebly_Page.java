@@ -33,7 +33,7 @@ public class Weebly_Page extends BasePage{
     }
 
     public Weebly_Page confirmWeeblyHomePage() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver,1000);
+//        WebDriverWait wait = new WebDriverWait(driver,1000);
         // Assertion One
 //        WebElement supportIcon = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//button[contains(text(),'Support')]"))));
 //        Assert.assertEquals(supportIcon.getText(),"Support");

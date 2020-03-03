@@ -13,7 +13,7 @@ public class FillForm_Page extends BasePage{
     public @FindBy(xpath = "//h1[contains(text(),'Complete Web Form')]") WebElement CompleteFormText;
     public @FindBy(xpath = "//a[@class='btn btn-lg'][contains(text(),'Complete Web Form')]") WebElement completeForm;
     public @FindBy(css = "#first-name") WebElement firstName;
-    public @FindBy(css = "#last-namee1") WebElement lastName;
+    public @FindBy(css = "#last-name") WebElement lastName;
     public @FindBy(css = "#job-title") WebElement jobTitle;
     public @FindBy(xpath = "//a[@class='btn btn-lg btn-primary']")WebElement Submit;
     public  static String url = "https://formy-project.herokuapp.com/";

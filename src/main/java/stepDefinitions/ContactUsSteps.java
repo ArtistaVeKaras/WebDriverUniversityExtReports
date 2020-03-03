@@ -48,7 +48,7 @@ public class ContactUsSteps extends DriverFactory {
 
 	@Then("^the information should successfully be submitted via the contact us form$")
 	public void the_information_should_successfully_be_submitted_via_the_contact_us_form() throws Exception  {
-		Assert.fail();
+//		Assert.fail();
 		contactUsPage.confirmContactUsFormSubmissionWasSuccessful();
 	}
 }

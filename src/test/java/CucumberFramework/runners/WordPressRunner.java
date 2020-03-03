@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 		features = {"src/test/java/CucumberFramework/featureFiles/"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@Form"},
+		tags = {"@Weebly"},
 		plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"}
 		)
 
