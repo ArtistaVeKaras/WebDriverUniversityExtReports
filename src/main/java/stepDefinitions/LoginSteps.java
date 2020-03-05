@@ -17,6 +17,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginSteps {
+
+//	TODO: remove the before and after test as they cause the drivers to open up
 	WebDriver driver;
 	
 	@Before()

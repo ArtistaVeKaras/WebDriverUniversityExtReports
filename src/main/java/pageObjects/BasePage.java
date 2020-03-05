@@ -320,7 +320,7 @@ public class BasePage extends DriverFactory {
 
 	/**********************************************************************************/
 	/**********************************************************************************/
-	/***EXTENT REPORT****************************************************************/
+	/***EXTENT REPORT CaptureScreenShoot***********************************************/
 	public static String returnDateStamp(String fileExtension) {
 		Date d = new Date();
 		String date = d.toString().replace(":", "_").replace(" ", "_") + fileExtension;
