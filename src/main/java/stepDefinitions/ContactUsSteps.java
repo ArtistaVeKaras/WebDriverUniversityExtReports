@@ -17,7 +17,7 @@ public class ContactUsSteps extends DriverFactory {
 	
 	@Given("^I access webdriveruniversity contact us form$")
 	public void i_access_webdriveruniversity_contact_us_form() throws IOException {
-		Reporter.addStepLog("Accessing webdriveruniversity");
+//		Reporter.addStepLog("Accessing webdriveruniversity");
 		contactUsPage.getContactUsPage();
 	}
 

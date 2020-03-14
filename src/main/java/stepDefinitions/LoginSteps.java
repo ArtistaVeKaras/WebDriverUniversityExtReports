@@ -37,7 +37,7 @@ public class LoginSteps {
 	
 	@Given("^user navigates to \"([^\"]*)\"$")
 	public void user_navigates_to(String url) throws Throwable {
-		driver.get(url);  //http://www.webdriveruniversity.com/
+		driver.get(url);
 	}
 
 	@When("^user clicks on the login portal button$")

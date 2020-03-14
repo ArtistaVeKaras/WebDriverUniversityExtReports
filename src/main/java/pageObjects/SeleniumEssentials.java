@@ -1,4 +1,5 @@
 package pageObjects;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,13 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumEssentials {
-//    this methods i developed in other projects
     public static WebDriver driver;
 
     public static void main(String[] args) throws InterruptedException {
-//        driver = util.getDriver();
-//        t=The driver will not open it needs to extend from the DriverFactory
-        fillInForm();
         autoComplete();
         //scrollToElement();
         //switchWindow();
