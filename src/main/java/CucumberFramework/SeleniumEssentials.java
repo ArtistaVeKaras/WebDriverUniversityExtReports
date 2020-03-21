@@ -1,17 +1,21 @@
-package pageObjects;
+package CucumberFramework;
 
+import cucumber.api.java.Before;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumEssentials {
     public static WebDriver driver;
 
-    public static void main(String[] args) throws InterruptedException {
-        autoComplete();
+//    public static void main(String[] args) throws InterruptedException {
+
+        //fillInForm();
         //scrollToElement();
         //switchWindow();
         //switchToAlert();
@@ -23,11 +27,14 @@ public class SeleniumEssentials {
         //uploadFile();
         //implicitlyWait();
         //explicitlyWait();
-        WebForm();
-    }
+//        WebForm();
+//    }
 
     //Open the browser and fill in the form (Task 1)
+    @Test
     public static void fillInForm() throws InterruptedException {
+        System.out.println("Hello");
+        driver.get("https://google.com");
         WebElement first_name = driver.findElement(By.id("name"));
         first_name.click();
         first_name.sendKeys("Claudio");
@@ -36,7 +43,10 @@ public class SeleniumEssentials {
         Thread.sleep(1000);
     }
     //Open browser and perform a autocomplete (Task 2)
+    @Test
     public static void autoComplete() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
+        WebDriver driver = new ChromeDriver();
         driver.get("https://formy-project.herokuapp.com/autocomplete");
         WebElement autocomplete = driver.findElement(By.id("autocomplete"));
         autocomplete.sendKeys("87 Oxford Street, London, UK");
@@ -178,3 +188,4 @@ public class SeleniumEssentials {
         driver.quit();
     }
 }
+

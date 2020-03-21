@@ -27,9 +27,7 @@ public class SauceLabsTest {
         caps.setCapability("name","GoogleTest1");
 
 //        Running the test in SauceLabs
-
 //        WebDriver driver = new RemoteWebDriver(new java.net.URL(URL),caps);
-
 //        Running the test on local webdriver
         String ProjPath = System.getProperty("user.dir");
         System.setProperty("webdriver.chrome.driver",ProjPath+"/src/test/java/CucumberFramework/resources/chromedriver");

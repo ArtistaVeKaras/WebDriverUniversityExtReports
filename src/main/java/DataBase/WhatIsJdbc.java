@@ -1,57 +1,34 @@
 package DataBase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import org.testng.annotations.Test;
+
+import java.sql.*;
 
 public class WhatIsJdbc {
 
-     public static void main(String[] args) {
-            Connection conn = null;
-            System.out.println("Hello!");
+    @Test
+    public void testDatabase() throws ClassNotFoundException, SQLException {
+        try {
+            //url parameters
+            String url = "jdbc:mysql://localhost:3306/mysql";
+            String user = "root";
+            String password = "root";
 
-         try {
-             //db parameters
-             String url = "jdbc:mysql://localhost:2279/mysqljdbc";
-             String user = "root";
-             String password = "porto";
+            //Connecting to the databse
+            Class.forName("com.mysql.cj.jdbc.Driver"); //Connect to the driver
+            System.out.println("Driver Loaded");
+            Connection conn = DriverManager.getConnection(url, user, password); //connect to the database
+            System.out.println("Successfully connect to the Database");
 
-             //create a connection to the database
-             conn = DriverManager.getConnection(url,user,password);
-                 System.out.println("Connection successfull");
+            //Executing sql queries
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("show columns from plugin;");
+            String result = rs.getString("name");
+            System.out.println(result);
 
-
-         } catch (SQLException e) {
-             System.out.println("Error: " + e.getMessage());
-         } finally {
-            try {
-                if(conn != null)
-                    conn.close();
-            }catch (SQLException ex){
-                System.out.println("Error: " +ex.getMessage());
-            }
-         }
-
-
-//         Connection conn = null;
-//         try {
-//             String url = "jdbc:sqlite:/home/claudio/Downloads/chinook/chinook.db";
-//             conn = DriverManager.getConnection(url);
-//
-//             System.out.println("Got it!");
-//
-//         } catch (SQLException e) {
-//             throw new Error("Problem", e);
-//         } finally {
-//             try {
-//                 if (conn != null) {
-//                     conn.close();
-//                 }
-//             } catch (SQLException ex) {
-//                 System.out.println(ex.getMessage());
-//             }
-//         }
-     }
+        }catch (Exception e){
+            System.out.println("ERROR:" + e.getMessage());
+        }
+    }
 }
+
