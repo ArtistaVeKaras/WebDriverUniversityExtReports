@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import cucumberFramework.Log4jDemo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,6 +19,7 @@ public class DriverFactory {
 	public static WordPress_Page wordPressPage;
 	public static Weebly_Page weebly_page;
 	public static FillForm_Page fill_form;
+	public static Log4jDemo log4jDemo;
 
 	public WebDriver getDriver() {
 		try {
@@ -71,6 +73,7 @@ public class DriverFactory {
 			wordPressPage= PageFactory.initElements(driver, WordPress_Page.class);
 			weebly_page= PageFactory.initElements(driver, Weebly_Page.class);
 			fill_form= PageFactory.initElements(driver, FillForm_Page.class);
+			log4jDemo= PageFactory.initElements(driver, Log4jDemo.class);
 		}
 		return driver;
 	}

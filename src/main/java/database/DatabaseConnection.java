@@ -1,4 +1,4 @@
-package DataBase;
+package database;
 
 import org.testng.annotations.Test;
 
@@ -7,7 +7,7 @@ import java.sql.*;
 public class DatabaseConnection {
 
     @Test
-    public void testDatabase() throws ClassNotFoundException, SQLException {
+    public void testDatabase() throws SQLException {
         Connection connection = null;
         //url parameters
         String URL = "jdbc:mysql://localhost:3306/";

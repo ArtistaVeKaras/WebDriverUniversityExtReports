@@ -1,4 +1,4 @@
-package CucumberFramework;
+package cucumberFramework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

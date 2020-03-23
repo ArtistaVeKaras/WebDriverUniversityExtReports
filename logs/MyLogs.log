@@ -1,0 +1,5 @@
+[DEBUG] 2020-03-23 14:21:39.557 [main] Log4jDemo - Navigating to google url!!!
+[INFO ] 2020-03-23 14:21:42.851 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is a fatal message

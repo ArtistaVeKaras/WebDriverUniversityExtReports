@@ -1,4 +1,4 @@
-package CucumberFramework.runners;
+package cucumberFramework.runners;
 
 import java.io.File;
 import java.io.IOException;

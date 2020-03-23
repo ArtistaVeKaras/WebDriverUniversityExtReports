@@ -1,4 +1,4 @@
-package CucumberFramework;
+package cucumberFramework;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumEssentials {
     public static WebDriver driver;
 
-//    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
 
-        //fillInForm();
+//        fillInForm();
         //scrollToElement();
         //switchWindow();
         //switchToAlert();
@@ -27,7 +27,7 @@ public class SeleniumEssentials {
         //implicitlyWait();
         //explicitlyWait();
 //        WebForm();
-//    }
+    }
 
     //Open the browser and fill in the form (Task 1)
     @Test
@@ -44,7 +44,7 @@ public class SeleniumEssentials {
     //Open browser and perform a autocomplete (Task 2)
     @Test
     public static void autoComplete() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/test/java/cucumberFramework/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://formy-project.herokuapp.com/autocomplete");
         WebElement autocomplete = driver.findElement(By.id("autocomplete"));

@@ -1,4 +1,4 @@
-package CucumberFramework;
+package cucumberFramework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 public class SauceLabsTest {
+   //TODO: extedn this class to DriverFactory to avoid setting up the driver again
 
     public static final String USERNAME = "akiira";
     public static final String ACCESS_KEY ="e0de27f8-f0da-4acf-b735-88ffbf8e4d76";
