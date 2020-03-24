@@ -3,3 +3,18 @@
 [WARN ] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is a warn message
 [ERROR] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is an error message
 [FATAL] 2020-03-23 14:21:42.852 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-23 17:34:08.058 [main] Log4jDemo - Result is 6
+[INFO ] 2020-03-23 17:36:17.785 [main] Log4jDemo - Result is 8
+[DEBUG] 2020-03-23 20:05:54.838 [main] Log4jDemo - Navigating to google url!!!
+[INFO ] 2020-03-23 20:05:57.840 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-23 20:05:57.841 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-23 20:05:57.841 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-23 20:05:57.841 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-23 20:19:23.308 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-23 20:19:23.310 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-23 20:19:23.311 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-23 20:19:23.311 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-23 20:25:19.833 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-23 20:25:19.837 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-23 20:25:19.837 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-23 20:25:19.837 [main] Log4jDemo - This is a fatal message
