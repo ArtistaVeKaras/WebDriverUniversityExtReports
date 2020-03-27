@@ -1,8 +1,6 @@
 package database;
 
 import org.apache.logging.log4j.LogManager;
-import org.testng.annotations.Test;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -20,8 +18,8 @@ public class DBConnection {
         try {
             //Connecting to the database
             Class.forName("com.mysql.cj.jdbc.Driver"); //Connect to the driver
-            logger.info("Driver Loaded!");
-            logger.info("Successfully connect to the Database!");
+            logger.debug("Driver Loaded!");
+            logger.debug("Successfully connect to the Database!");
         }catch (Exception e){
             logger.error("No Connection Found!!");
         }
