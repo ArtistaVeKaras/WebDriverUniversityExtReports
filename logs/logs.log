@@ -8,3 +8,48 @@
 [WARN ] 2020-03-27 17:30:43.458 [main] Log4jDemo - This is a warn message
 [ERROR] 2020-03-27 17:30:43.459 [main] Log4jDemo - This is an error message
 [FATAL] 2020-03-27 17:30:43.459 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:49:06.959 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:49:06.964 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:49:06.965 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:49:06.966 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:49:06.967 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:50:03.584 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:50:03.596 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:50:03.597 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:50:03.597 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:50:03.597 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:50:54.661 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:50:54.665 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:50:54.665 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:50:54.666 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:50:54.666 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:50:54.702 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:50:54.707 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:50:54.707 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:50:54.707 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:50:54.708 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:50:54.777 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:50:54.783 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:50:54.783 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:50:54.783 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:50:54.784 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:51:27.780 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:51:27.782 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:51:27.782 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:51:27.782 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:51:27.783 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:53:32.449 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:53:35.510 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:53:39.303 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:53:57.630 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:54:25.556 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:54:37.984 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:54:37.987 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:54:37.987 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:54:37.987 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:54:37.988 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-03-27 23:55:08.109 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-03-27 23:55:14.022 [main] Log4jDemo - This is an info message
+[WARN ] 2020-03-27 23:55:18.160 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-03-27 23:55:19.547 [main] Log4jDemo - This is an error message
+[FATAL] 2020-03-27 23:55:21.110 [main] Log4jDemo - This is a fatal message

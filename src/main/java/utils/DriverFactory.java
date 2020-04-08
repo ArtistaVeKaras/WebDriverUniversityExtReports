@@ -68,6 +68,8 @@ public class DriverFactory {
 		} finally {
 //			assert driver != null;
 			driver.manage().timeouts().pageLoadTimeout(150, TimeUnit.SECONDS);
+
+			//initializing this page page elements
 			contactUsPage = PageFactory.initElements(driver, ContactUs_Page.class);
 			productsPage = PageFactory.initElements(driver, Products_Page.class);
 			wordPressPage= PageFactory.initElements(driver, WordPress_Page.class);

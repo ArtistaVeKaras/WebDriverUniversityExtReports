@@ -20,6 +20,7 @@ import pageObjects.BasePage;
 						    "com.cucumber.listener.ExtentCucumberFormatter:output/report.html"})
 
 public class MainRunnerScreenShootMethod extends AbstractTestNGCucumberTests {
+
 	@AfterClass
 	public static void writeExtentReport() throws IOException {
 		Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "/src/main/java/utils/ReportsConfig.xml"));

@@ -9,7 +9,7 @@ public class SqlQuery extends DBConnection {
 
     private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(SqlQuery.class);
     public static final String SQL = "SELECT * from new_students WHERE Fee<=?";
-    public static final String SQLInsertData = "insert into new_students (City, Email, Fee, FirstName, ID, LastName) values ('Leiria', 'this@outlook.com', 700, 'Prometheus', 40, 'g')";
+    public static final String SQLInsertData = "insert into new_students (City, Email, Fee, FirstName, ID, LastName) values ('Moscow', 't45@outlook.com', 200, 'Prome', 11, 'E')";
 
     @Test
     //retrive data from Persons table
