@@ -53,3 +53,8 @@
 [WARN ] 2020-03-27 23:55:18.160 [main] Log4jDemo - This is a warn message
 [ERROR] 2020-03-27 23:55:19.547 [main] Log4jDemo - This is an error message
 [FATAL] 2020-03-27 23:55:21.110 [main] Log4jDemo - This is a fatal message
+[INFO ] 2020-07-09 11:26:31.234 [main] Log4jDemo - This is an info message
+[DEBUG] 2020-07-09 11:26:31.237 [main] Log4jDemo - This is an info message
+[WARN ] 2020-07-09 11:26:31.237 [main] Log4jDemo - This is a warn message
+[ERROR] 2020-07-09 11:26:31.237 [main] Log4jDemo - This is an error message
+[FATAL] 2020-07-09 11:26:31.238 [main] Log4jDemo - This is a fatal message

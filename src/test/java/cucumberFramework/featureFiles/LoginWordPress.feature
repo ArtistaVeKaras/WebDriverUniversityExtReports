@@ -7,7 +7,7 @@ Feature: User Logins into WordPress account
     | rohonda100@gmail.com | paymail@gmail.com  |  this@gmail.com |
     | claud@gmail.com | 700@gmail.com  |  that@gmail.com |
     And The user enters a username
-    | claudio   | jonnh  |   alex   |
+    | claudio   | jonh  |   alex   |
     And The user enters a password
     |   pass1123    |   learn123   |
     And The user click the create account button

@@ -1,7 +1,7 @@
-CREATE TABLE candidates (
-    id INT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    fee INT
-);
+--CREATE TABLE candidates (
+--    id INT PRIMARY KEY,
+--    first_name VARCHAR(100) NOT NULL,
+--    last_name VARCHAR(100) NOT NULL,
+--    email VARCHAR(255) NOT NULL UNIQUE,
+--    fee INT
+--);

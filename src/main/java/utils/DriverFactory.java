@@ -5,6 +5,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import cucumberFramework.Log4jDemo;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,6 +21,7 @@ public class DriverFactory {
 	public static Weebly_Page weebly_page;
 	public static FillForm_Page fill_form;
 	public static Log4jDemo log4jDemo;
+	public static ChekoutPodPoint_Page chekoutPodPoint_page;
 
 	public WebDriver getDriver() {
 		try {
@@ -45,8 +47,9 @@ public class DriverFactory {
 				case "chrome":
 					// code
 					if (null == driver) {
-						System.setProperty("webdriver.chrome.driver", Constant.CHROME_DRIVER_DIRECTORY);
+//						System.setProperty("webdriver.chrome.driver", Constant.CHROME_DRIVER_DIRECTORY);
 						// CHROME OPTIONS
+                        WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver();
 //					driver.manage().window().maximize();
 					}
@@ -76,6 +79,7 @@ public class DriverFactory {
 			weebly_page= PageFactory.initElements(driver, Weebly_Page.class);
 			fill_form= PageFactory.initElements(driver, FillForm_Page.class);
 			log4jDemo= PageFactory.initElements(driver, Log4jDemo.class);
+			chekoutPodPoint_page = PageFactory.initElements(driver, ChekoutPodPoint_Page.class);
 		}
 		return driver;
 	}
