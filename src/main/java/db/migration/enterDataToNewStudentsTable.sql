@@ -1,1 +1,0 @@
-insert into user.new_students (City, Email, Fee, FirstName, ID, LastName) values ('Faro', 'ak@outlook.com', 80, 'Phil', 11, 'L');

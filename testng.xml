@@ -3,9 +3,7 @@
 <suite name="Cucumber Framework" verbose="2">
 	<test name="Cucumber Tests">
 		<classes>
-			<class name="cucumberFramework.runners.MainRunnerScreenShootMethod"/>
-			<class name="cucumberFramework.runners.MainRunner"/>
-			<class name="cucumberFramework.runners.WordPressRunner"/>
+			<class name="cucumberFramework.runners.UtilitaRunner"/>
 		</classes>
 	</test>
 </suite>
