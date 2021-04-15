@@ -15,6 +15,7 @@ public class ReadConfigFile {
 		try {
 			input = ReadConfigFile.class.getClassLoader().getResourceAsStream(Constant.CONFIG_PROPERTIES_DIRECTORY);
 			prop = new Properties();
+			assert input != null;
 			prop.load(input);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -26,7 +27,7 @@ public class ReadConfigFile {
 			return "";
 		return prop.getProperty("browser");
 	}
-	
+
 	public String readPropertiesFileForCMD(String term) throws IOException {
 		Properties p = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\properties\\config.properties");

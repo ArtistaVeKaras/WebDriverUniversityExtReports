@@ -22,12 +22,12 @@ public class MasterHooks extends DriverFactory {
 				scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
 				BasePage.captureScreenshot();
 				driver.manage().deleteAllCookies();
-				driver.quit();
+//				driver.quit();
 				driver = null;
 			}
 			if(driver != null) {
 				driver.manage().deleteAllCookies();
-				driver.quit();
+//				driver.quit();
 				driver = null;
 			}
 		} catch (Exception e) {

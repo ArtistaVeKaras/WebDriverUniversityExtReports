@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DriverFactory;
+
 import java.awt.*;
 import java.io.*;
 import java.util.Date;
@@ -20,7 +21,7 @@ public class BasePage extends DriverFactory {
 	private static String screenshotName;
 
 	public BasePage() throws IOException {
-		this.wait = new WebDriverWait(driver, 15);
+		this.wait = new WebDriverWait(driver, 20);
 		jsExecutor = ((JavascriptExecutor) driver);
 	}
 
@@ -31,7 +32,7 @@ public class BasePage extends DriverFactory {
 	public void waitAndClickElement(WebElement element) throws InterruptedException, IOException {
 		boolean clicked = false;
 		int attempts = 0;
-		while (!clicked && attempts < 10) {
+		while (!clicked && attempts < 10 ) {
 			try {
 				this.wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 				System.out.println("Successfully clicked on the WebElement: " + "<" + element.toString() + ">");

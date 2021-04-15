@@ -21,23 +21,23 @@ public class LoginSteps {
 //	TODO: remove the before and after test as they cause the drivers to open up
 	WebDriver driver;
 	
-	@Before()
-	public void setup() throws IOException {
-		System.setProperty("webdriver.chrome.driver", Paths.get(System.getProperty("user.dir")).toRealPath() +  "/src/test/java/CucumberFramework/resources/chromedriver");
-		this.driver = new ChromeDriver();
-		this.driver.manage().window().maximize();
-		this.driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-	}
-	
-	@After()
-	public void tearDown() {
-		driver.manage().deleteAllCookies();
-		driver.quit();
-	}
+//	@Before()
+//	public void setup() throws IOException {
+//		System.setProperty("webdriver.chrome.driver", Paths.get(System.getProperty("user.dir")).toRealPath() +  "/src/test/java/CucumberFramework/resources/chromedriver");
+//		this.driver = new ChromeDriver();
+//		this.driver.manage().window().maximize();
+//		this.driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+//	}
+//
+//	@After()
+//	public void tearDown() {
+//		driver.manage().deleteAllCookies();
+//		driver.quit();
+//	}
 	
 	@Given("^user navigates to \"([^\"]*)\"$")
 	public void user_navigates_to(String url) throws Throwable {
-		driver.get(url);  //http://www.webdriveruniversity.com/
+		driver.get(url);
 	}
 
 	@When("^user clicks on the login portal button$")
