@@ -31,3 +31,5 @@ Right-click on a class and select Convert to Testng
 
 ## Git Notes
 
+* git commit //open an editor to enter your commit message
+

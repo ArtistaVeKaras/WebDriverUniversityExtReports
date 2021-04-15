@@ -7,3 +7,4 @@ CucumberFramework.iml
 output/
 test-output/
 target/
+node_modules
