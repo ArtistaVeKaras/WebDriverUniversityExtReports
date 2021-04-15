@@ -29,3 +29,5 @@ Right-click on a class and select Convert to Testng
 * docker-compose restart //spins brand new containers 
 * docker-compose down //tear down the grid
 
+## Git Notes
+

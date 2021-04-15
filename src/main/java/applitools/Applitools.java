@@ -1,6 +1,5 @@
 package applitools;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,6 +16,7 @@ public class Applitools {
           Link to perform Cross-browser Visual Testing
           https://applitools.com/blog/how-to-do-cross-browser-visual-testing-with/
          */
+        System.out.println("Starting Test");
 
     }
 

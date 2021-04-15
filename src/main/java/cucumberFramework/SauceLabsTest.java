@@ -21,7 +21,7 @@ public class SauceLabsTest {
     @Test
     public static void sauceLabs() throws MalformedURLException {
 
-        DesiredCapabilities caps = DesiredCapabilities.chrome();
+        DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platform","linux");
         caps.setCapability("version","latest");
         caps.setCapability("name","GoogleTest1");

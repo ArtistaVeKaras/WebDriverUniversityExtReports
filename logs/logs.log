@@ -68,3 +68,8 @@
 [WARN ] 2021-04-15 08:51:47.909 [main] Log4jDemo - This is a warn message
 [ERROR] 2021-04-15 08:51:47.910 [main] Log4jDemo - This is an error message
 [FATAL] 2021-04-15 08:51:47.911 [main] Log4jDemo - This is a fatal message
+[INFO ] 2021-04-15 18:33:04.091 [main] Log4jDemo - This is an info message
+[DEBUG] 2021-04-15 18:33:04.093 [main] Log4jDemo - This is an info message
+[WARN ] 2021-04-15 18:33:04.093 [main] Log4jDemo - This is a warn message
+[ERROR] 2021-04-15 18:33:04.093 [main] Log4jDemo - This is an error message
+[FATAL] 2021-04-15 18:33:04.094 [main] Log4jDemo - This is a fatal message

@@ -37,7 +37,7 @@ public class DriverFactory {
 					// code
 					if (null == driver) {
 						System.setProperty("webdriver.gecko.driver", Constant.GECKO_DRIVER_DIRECTORY);
-						DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+						DesiredCapabilities capabilities = new DesiredCapabilities();
 						capabilities.setCapability("marionette", true);
 						driver = new FirefoxDriver();
 //					maximising the gecko driver does not work as well it does with chrome
@@ -60,7 +60,7 @@ public class DriverFactory {
 				case "ie":
 					// code
 					if (null == driver) {
-						DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+						DesiredCapabilities capabilities = new DesiredCapabilities();
 						System.setProperty("webdriver.ie.driver", Constant.IE_DRIVER_DIRECTORY);
 						capabilities.setCapability("ignoreZoomSetting", true);
 //					driver = new InternetExplorerDriver(capabilities);
