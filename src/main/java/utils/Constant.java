@@ -1,8 +1,5 @@
 package utils;
 
-import cucumberFramework.WebdriverManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class Constant {
 
 	/**Config Properties file **/

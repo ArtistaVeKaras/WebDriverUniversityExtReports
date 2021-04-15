@@ -14,19 +14,19 @@ public class SeleniumEssentials {
 
     public static void main(String[] args) throws InterruptedException {
 
-//        fillInForm();
-        //scrollToElement();
-        //switchWindow();
-        //switchToAlert();
-        //javaScriptCommands();
-        //dragAndDrop();
-        //radioButton();
-        //datePiker();
-        //dropDown();
-        //uploadFile();
-        //implicitlyWait();
-        //explicitlyWait();
-//        WebForm();
+        fillInForm();
+        scroolToElement();
+        switchWindow();
+        switchToAlert();
+        javaScriptCommands();
+        dragAndDrop();
+        radioButton();
+        datePiker();
+        dropDown();
+        uploadFile();
+        implicitlyWait();
+        explicitlyWait();
+        WebForm();
     }
 
     //Open the browser and fill in the form (Task 1)
@@ -53,11 +53,12 @@ public class SeleniumEssentials {
         WebElement autoCompleteResult = driver.findElement(By.className("pac-item"));
         autoCompleteResult.click();
     }
+
     //Scroll to element on the page (Task 3)
     public static void scroolToElement() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/scroll");
-        //Actions will scroll the to the botton of the page and click on the name field
-        //This is because the name element is located at the botton!
+        //Actions will scroll the to the button of the page and click on the name field
+        //This is because the name element is located at the button!
         WebElement name = driver.findElement(By.id("name"));
         Actions actions = new Actions(driver);
         actions.moveToElement(name);
@@ -67,6 +68,7 @@ public class SeleniumEssentials {
         date.sendKeys("01/01/2020");
         Thread.sleep(1000);
     }
+
     //Switching to the original window
     public static void switchWindow() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/switch-window");
@@ -79,9 +81,10 @@ public class SeleniumEssentials {
             driver.switchTo().window(handle1);
             Thread.sleep(1000);
         }
-        //swhitches back to the original window
+        //switches back to the original window
         driver.switchTo().window(originalHandle);
     }
+
     //Switching to the alert element
     public static void switchToAlert(){
         driver.get("https://formy-project.herokuapp.com/switch-window");
@@ -91,6 +94,7 @@ public class SeleniumEssentials {
         Alert alert1 = driver.switchTo().alert();
         alert1.accept();
     }
+
     //Performing JavaScript commands on the alert button
     public static void javaScriptCommands() throws InterruptedException {
         driver.get("https://formy-project.herokuapp.com/modal");
@@ -103,6 +107,7 @@ public class SeleniumEssentials {
         Thread.sleep(1000);
         driver.quit();
     }
+
     //Performing drag and drop
     public static void dragAndDrop(){
         driver.manage().window().maximize();
@@ -113,8 +118,9 @@ public class SeleniumEssentials {
         Actions action = new Actions(driver);
         action.dragAndDrop(image,box).build().perform();
     }
+
     //Performing radio button checks
-    public static void radioButton() throws InterruptedException {
+    public static void radioButton() {
         driver.get("https://formy-project.herokuapp.com/radiobutton");
         WebElement radioButton1 = driver.findElement(By.id("radio-button-1"));
         radioButton1.click();
@@ -123,6 +129,7 @@ public class SeleniumEssentials {
         WebElement radioButton3 = driver.findElement(By.cssSelector("input[value='option3']"));
         radioButton3.click();
     }
+
     //Performing date picker
     public static void datePiker(){
         driver.get("https://formy-project.herokuapp.com/datepicker");
@@ -139,6 +146,7 @@ public class SeleniumEssentials {
         WebElement autoComplete = driver.findElement(By.id("autocomplete"));
         autoComplete.click();
     }
+
     //Performing upload file
     public static void uploadFile(){
         driver.get("https://formy-project.herokuapp.com/fileupload");
@@ -148,6 +156,7 @@ public class SeleniumEssentials {
         uploadUploadField.sendKeys("AkiraAv.jpg");
         //driver.quit();
     }
+
     //Implicitly wait will wait a couple seconds before something is performed
     public static void implicitlyWait(){
         driver.get("https://formy-project.herokuapp.com/autocomplete");
@@ -160,7 +169,8 @@ public class SeleniumEssentials {
         autoCompleteResult.click();
         driver.quit();
     }
-    //Explicitly Wait will wait until a certain element is visible/dispkayed or clickable
+
+    //Explicitly Wait will wait until a certain element is visible/displayed or clickable
     public static void explicitlyWait(){
         driver.get("https://formy-project.herokuapp.com/autocomplete");
         WebElement autocomplete = driver.findElement(By.id("autocomplete"));

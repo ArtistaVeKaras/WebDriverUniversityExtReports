@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class Persons {
 
-    private static Logger logger = LogManager.getLogger(Persons.class);
+    private static final Logger logger = LogManager.getLogger(Persons.class);
 
     public static void getPersons(ResultSet rs) throws SQLException {
 

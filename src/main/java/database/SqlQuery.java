@@ -7,16 +7,16 @@ import java.sql.*;
 
 public class SqlQuery extends DBConnection {
 
-    private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(SqlQuery.class);
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(SqlQuery.class);
     public static final String SQL = "SELECT * from new_students WHERE Fee<=?";
     public static final String SQLInsertData = "insert into new_students (City, Email, Fee, FirstName, ID, LastName) values ('Moscow', 't45@outlook.com', 200, 'Prome', 11, 'E')";
 
     @Test
-    //retrive data from Persons table
-    public void retrieveDataFromSchema() throws SQLException, ClassNotFoundException {
+    //retrieve data from Persons table
+    public void retrieveDataFromSchema() throws ClassNotFoundException {
         try (Connection conn = DBConnection.getConnection();
              Statement stm = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-             ResultSet rs = stm.executeQuery("select * from Persons");
+             ResultSet rs = stm.executeQuery("select * from Persons")
         ) {
             //performing sql query from the persons class
             logger.info("Executing SQL queries!!");
@@ -27,9 +27,9 @@ public class SqlQuery extends DBConnection {
     }
     @Test
     public void getInputFromUser() throws SQLException {
-        double maxfee;
+        double maxFee;
         try {
-            maxfee = Input.getInt("Enter a maxmimum fee:");
+            maxFee = Input.getInt("Enter a maxmimum fee:");
         }catch (Exception e){
             logger.error("Error: Invalid number: ");
             return;
@@ -39,7 +39,7 @@ public class SqlQuery extends DBConnection {
         try {
             Connection conn = DBConnection.getConnection();
             PreparedStatement statement= conn.prepareStatement(SQL,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            statement.setDouble(1,maxfee);
+            statement.setDouble(1,maxFee);
             rs =statement.executeQuery();
             Persons.getPersons(rs);
         } catch (SQLException | ClassNotFoundException e) {
@@ -53,9 +53,9 @@ public class SqlQuery extends DBConnection {
 
     @Test
     //insert data into the new_students table
-    public void insertDataToDatabase() throws SQLException, ClassNotFoundException {
+    public void insertDataToDatabase() throws ClassNotFoundException {
         try (Connection conn = DBConnection.getConnection();
-             Statement stm = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+             Statement stm = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
 //             ResultSet rs = stm.executeUpdate(SQLInsertData);
 //             TODO: solve this issues inserting data on the table is not working
         ) {

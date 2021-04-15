@@ -1,32 +1,40 @@
 package cucumberFramework;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SeleniumEssentialsTwo {
 
-    public static String url = "https://google.com";
+    public static final String URL = "https://google.com";
+    static WebDriver driver;
 
     public static void main(String[] args) {
-//        clickAndHold();
-//        contextClick();
-//        doubleClick();
-//        movceToElement();
-//        dragAndDropBy();
-          release();
+        clickAndHold();
+        contextClick();
+        doubleClick();
+        moveToElement();
+        dragAndDropBy();
+        release();
         }
+
+
+    @BeforeTest
+    public static void driverSetUp(){
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
     @Test
 //    It will move to the element and clicks (without releasing) in the middle of the given element.
     public static void clickAndHold() {
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
         try {
-            driver.get(url);
+            driver.get(URL);
 
             // Store 'google search' button web element
             WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
@@ -37,12 +45,11 @@ public class SeleniumEssentialsTwo {
             driver.quit();
         }
     }
+
     @Test // This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
     public static void contextClick(){
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
         try {
-            driver.get(url);
+            driver.get(URL);
 
             // Store 'google search' button web element
             WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
@@ -53,12 +60,11 @@ public class SeleniumEssentialsTwo {
             driver.quit();
         }
     }
+
     @Test //It will move to the element and performs a double-click in the middle of the given element.
     public static void doubleClick(){
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
         try {
-            driver.get(url);
+            driver.get(URL);
 
             // Store 'google search' button web element
             WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
@@ -72,12 +78,11 @@ public class SeleniumEssentialsTwo {
             driver.quit();
         }
     }
+
     @Test //This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
-    public static void movceToElement(){
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
+    public static void moveToElement(){
         try {
-            driver.get(url);
+            driver.get(URL);
 
             // Store 'Gmail' anchor web element
             WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
@@ -94,8 +99,6 @@ public class SeleniumEssentialsTwo {
 
     @Test //This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
     public static void dragAndDropBy(){
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
         try {
             // Navigate to Url
             driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
@@ -115,8 +118,6 @@ public class SeleniumEssentialsTwo {
 
     @Test //This action releases the depressed left mouse button. If WebElement is passed, it will release depressed left mouse button on the given WebElement
     public static void release(){
-        System.setProperty("webdriver.chrome.driver","src/test/java/CucumberFramework/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
         try {
             // Navigate to Url
             driver.get("https://crossbrowsertesting.github.io/drag-and-drop");

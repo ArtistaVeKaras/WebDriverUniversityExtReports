@@ -8,11 +8,11 @@ import java.sql.SQLException;
 public class DBConnection {
 
     //url parameters
-    public static String URL = "jdbc:mysql://localhost:3306/";
-    public static String SCHEMADATABASE = "user";
-    public static String USERNAME = "root";
-    public static String PASSWORD = "root";
-    private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(DBConnection.class);
+    public static final String URL = "jdbc:mysql://localhost:3306/";
+    public static final String SCHEMADATABASE = "user";
+    public static final String USERNAME = "root";
+    public static final String PASSWORD = "root";
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(DBConnection.class);
 
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
         try {
