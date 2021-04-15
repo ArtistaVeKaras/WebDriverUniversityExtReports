@@ -21,7 +21,7 @@ public class BasePage extends DriverFactory {
 	private static String screenshotName;
 
 	public BasePage() throws IOException {
-		this.wait = new WebDriverWait(driver, 15);
+		this.wait = new WebDriverWait(driver, 20);
 		jsExecutor = ((JavascriptExecutor) driver);
 	}
 

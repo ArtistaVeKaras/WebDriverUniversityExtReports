@@ -16,8 +16,6 @@ public class Log4jDemo extends DriverFactory {
 
     @Test
         public void performSomeTask() throws IOException, InterruptedException {
-//        getDriver().get("https://www.google.com");
-//        getDriver().quit();
 
         logger.info("This is an info message");
         logger.debug("This is an info message");

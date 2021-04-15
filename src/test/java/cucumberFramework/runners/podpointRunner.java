@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 		features = {"src/test/java/cucumberFramework/featureFiles"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@Test"},
+		tags = {"@PodPoint"},
 		plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"}
 		)
 

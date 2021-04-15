@@ -84,9 +84,10 @@ public class WebdriverManager {
         wait.until(ExpectedConditions.elementToBeClickable(kwElement));
 
         try{
-            if (kwElement.isDisplayed());
-            kwElement.click();
-            System.out.println(kwElement.getText());
+            if (kwElement.isDisplayed()){
+                kwElement.click();
+                System.out.println(kwElement.getText());
+            }
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

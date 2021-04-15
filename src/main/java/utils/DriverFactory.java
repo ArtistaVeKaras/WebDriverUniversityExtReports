@@ -21,7 +21,7 @@ public class DriverFactory {
 	public static Weebly_Page weebly_page;
 	public static FillForm_Page fill_form;
 	public static Log4jDemo log4jDemo;
-	public static ChekoutPodPoint_Page chekoutPodPoint_page;
+	public static CheckoutPodPoint_Page checkoutPodPoint_page;
 
 	public WebDriver getDriver() {
 		try {
@@ -43,7 +43,6 @@ public class DriverFactory {
 //					maximising the gecko driver does not work as well it does with chrome
 					}
 					break;
-
 				case "chrome":
 					// code
 					if (null == driver) {
@@ -51,6 +50,9 @@ public class DriverFactory {
 						// CHROME OPTIONS
                         WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver();
+						driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+						driver.manage().window().maximize();
+//						driver.manage().deleteAllCookies();
 //					driver.manage().window().maximize();
 					}
 					break;
@@ -79,7 +81,7 @@ public class DriverFactory {
 			weebly_page= PageFactory.initElements(driver, Weebly_Page.class);
 			fill_form= PageFactory.initElements(driver, FillForm_Page.class);
 			log4jDemo= PageFactory.initElements(driver, Log4jDemo.class);
-			chekoutPodPoint_page = PageFactory.initElements(driver, ChekoutPodPoint_Page.class);
+			checkoutPodPoint_page = PageFactory.initElements(driver, CheckoutPodPoint_Page.class);
 		}
 		return driver;
 	}
