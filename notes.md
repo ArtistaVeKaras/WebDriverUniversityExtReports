@@ -41,4 +41,4 @@ Right-click on a class and select Convert to Testng
 * git checkout or gco -b <branch-name>
 * git branch -d <branch-name>
 * git commit --amend //amend the previous commit message
-* git rebase
+* git rebase -i HEAD~2 //squash the last two commits together
