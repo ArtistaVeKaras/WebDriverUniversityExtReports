@@ -19,7 +19,7 @@ import pageObjects.BasePage;
 						    "json:target/cucumber.json",
 						    "com.cucumber.listener.ExtentCucumberFormatter:output/report.html"})
 
-public class MainRunnerScreenShootMethod extends AbstractTestNGCucumberTests {
+public class MainRunnerScreenShoot extends AbstractTestNGCucumberTests {
 
 	@AfterClass
 	public static void writeExtentReport() throws IOException {

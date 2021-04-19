@@ -38,7 +38,6 @@ public class VerifyLoginLogoutSteps extends DriverUtil {
         }
     }
 
-
     @When("^I click  \"([^\"]*)\" button on the \"([^\"]*)\" page$")
     public void i_click_button_on_the_page(String arg1) throws Throwable {
        driver.findElement(By.id("LoginBtn")).click();
@@ -51,7 +50,5 @@ public class VerifyLoginLogoutSteps extends DriverUtil {
             String expectedTitlePage = title;
             Assert.assertEquals(actualTitlePage, expectedTitlePage);
         }
-
     }
-
 }

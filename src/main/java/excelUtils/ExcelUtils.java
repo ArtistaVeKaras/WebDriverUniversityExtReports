@@ -1,4 +1,4 @@
-package utilOne;
+package excelUtils;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -11,7 +11,6 @@ public class ExcelUtils {
   static XSSFSheet sheet;
 
   /**
-   * Constructor takes two parameters
    * @param sheetName the name of the excel sheet to be used
    * @param excelPath the path of the excel sheet
    * @throws IOException Throws an IOException

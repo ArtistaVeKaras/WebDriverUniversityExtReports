@@ -46,7 +46,6 @@ public class SauceLabsTest {
         WebDriverManager.chromedriver().setup();
          driver = new ChromeDriver();
          driver.get("https://ebay.com");
-         driver.quit();
          driver.close();
     }
 }

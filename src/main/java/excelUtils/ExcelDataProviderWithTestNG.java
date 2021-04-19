@@ -1,4 +1,4 @@
-package utilOne;
+package excelUtils;
 
 public class ExcelDataProviderWithTestNG {
 

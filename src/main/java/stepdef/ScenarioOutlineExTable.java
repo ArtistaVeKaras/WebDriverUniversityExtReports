@@ -26,14 +26,10 @@ public class ScenarioOutlineExTable {
     @And("^I click the on login button$")
     public void iClickTheOnLoginButton() throws Throwable {
         loginpage.loginbtn();
-
     }
 
     @Then("^I should be on home page$")
     public void iShouldBeOnHomePage() throws Throwable {
 
-
     }
-
-
 }

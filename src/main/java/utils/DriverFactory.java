@@ -9,6 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import pageObjects.*;
@@ -34,7 +35,7 @@ public class DriverFactory {
 			switch (browserName) {
 
 				case "firefox":
-					// code
+
 					if (null == driver) {
 						System.setProperty("webdriver.gecko.driver", Constant.GECKO_DRIVER_DIRECTORY);
 						DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -44,7 +45,7 @@ public class DriverFactory {
 					}
 					break;
 				case "chrome":
-					// code
+
 					if (null == driver) {
 //						System.setProperty("webdriver.chrome.driver", Constant.CHROME_DRIVER_DIRECTORY);
 						// CHROME OPTIONS
@@ -52,18 +53,18 @@ public class DriverFactory {
 						driver = new ChromeDriver();
 						driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 						driver.manage().window().maximize();
-//						driver.manage().deleteAllCookies();
-//					driver.manage().window().maximize();
+						driver.manage().deleteAllCookies();
+				    	driver.manage().window().maximize();
 					}
 					break;
 
 				case "ie":
-					// code
+
 					if (null == driver) {
 						DesiredCapabilities capabilities = new DesiredCapabilities();
 						System.setProperty("webdriver.ie.driver", Constant.IE_DRIVER_DIRECTORY);
 						capabilities.setCapability("ignoreZoomSetting", true);
-//					driver = new InternetExplorerDriver(capabilities);
+				    	driver = new InternetExplorerDriver(capabilities);
 						driver.manage().window().maximize();
 					}
 					break;
