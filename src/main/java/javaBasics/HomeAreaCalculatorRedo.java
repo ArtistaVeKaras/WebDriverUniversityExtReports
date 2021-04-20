@@ -4,19 +4,21 @@ import java.util.Scanner;
 
 public class HomeAreaCalculatorRedo {
 
-    private final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
+        //Create an obj in order to call the other methods because the methods are not static
+        //In Java constructors are declared by default implicitly
         HomeAreaCalculatorRedo calculator = new HomeAreaCalculatorRedo();
         Rectangle kitchen = calculator.getRoom();
         Rectangle bathroom = calculator.getRoom();
 
         double area = calculator.calculateArea(kitchen, bathroom);
 
-        System.out.println("The total are is: " + area);
+        System.out.println("The total area is: " + area);
 
-         calculator.scanner.close();
+         scanner.close();
     }
 
     public Rectangle getRoom(){
