@@ -41,3 +41,6 @@ Right-click on a class and select Convert to Testng
 * git commit --amend //amend the previous commit message
 * git rebase -i HEAD~2 //squash the last two commits into one
 * git --abort //aborts the current rebase
+
+## Pip symbol 
+|  
